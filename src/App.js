@@ -30,11 +30,9 @@ function App() {
     const saveLocalTodos=()=>{
      localStorage.setItem("todos" ,JSON.stringify(todos));}
 
-    // filterHandler();
-    // saveLocalTodos();
+    filterHandler();
+    saveLocalTodos();
   },[todos, status]);
-
-
 
 
 
