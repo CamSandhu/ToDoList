@@ -58,6 +58,7 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
+  overflow: hidden;
 }
 .filter-todo {
   padding: 1rem;
