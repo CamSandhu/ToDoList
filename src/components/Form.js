@@ -18,13 +18,13 @@ const statusHandler=e=>{
 }
 return(
   <form>
-  <div className="row">
+  <div >
       <input  value={props.inputText} onChange={inputTextHandler} type="text" className="todo-input" />
       <button  onClick={submitHandler} className="todo-button" type="submit">
         <i className="fas fa-plus-square"></i>
       </button>
     </div>
-      <div >
+      <div className="select">
         <select onChange={statusHandler} name="todos" className="filter-todo">
           <option value="all">All</option>
           <option value="completed">Completed</option>
