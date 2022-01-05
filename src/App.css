@@ -58,14 +58,19 @@ form button:hover {
   justify-content: space-between;
   align-items: center;
   transition: all 1s ease;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 .filter-todo {
   padding: 1rem;
+
 }
 .todo li {
   flex: 1;
   overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+
 }
 
 .trash-btn,
