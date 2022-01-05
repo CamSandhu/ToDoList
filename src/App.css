@@ -1,13 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+
 }
 header {
   font-size: 2rem;
@@ -26,6 +26,7 @@ form button {
   font-size: 2rem;
   border: none;
   background: white;
+  width: auto;
 }
 form button {
   color: #ff6f47;
@@ -63,6 +64,7 @@ form button:hover {
 }
 .todo li {
   flex: 1;
+  overflow: hidden;
 }
 
 .trash-btn,
@@ -137,3 +139,18 @@ select {
   transform: scale(1.5);
 }
 */
+
+/* -----for tablet-------- */
+@media only screen and (max-width:960px) {
+
+}
+
+/* -----for phones-------- */
+@media only screen and (max-width:767px) {
+form input{
+  width: 60%;
+}
+form{
+  text-align: center;
+}
+}
