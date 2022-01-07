@@ -3,11 +3,11 @@
   padding: 0;
 }
 body {
-  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  /* background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%); */
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-
+  background-color: black;
 }
 header {
   font-size: 2rem;
@@ -70,7 +70,7 @@ form button:hover {
   overflow: hidden;
      text-overflow: ellipsis;
      white-space: nowrap;
-
+  cursor: pointer;
 }
 
 .trash-btn,
@@ -138,6 +138,38 @@ select {
   background: #ff6f47;
   cursor: pointer;
   pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+  margin: 0 auto;
+  z-index: 1; /* Sit on top */
+  text-align:center;
+  width: 50%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+.modal #check{
+  position: absolute;
+  right: 1%;
+  bottom: 6%;
+}
+.modal #close{
+  position: absolute;
+  right:4%;
+  bottom: 6%;
+}
+#check:hover{
+  color: lightgreen;
+}
+
+#close:hover{
+  color: red;
 }
 /* Transition */
 /*

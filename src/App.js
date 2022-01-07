@@ -4,11 +4,13 @@ import React ,{useState, useEffect} from 'react';
 import Form from './components/Form';
 import TodoList from './components/TodoList';
 
+
 function App() {
   const [inputText, setInputText]=useState('');
   const [todos, setTodos]=useState([]);
   const [status, setStatus]=useState("all");
   const [filteredState, setFilteredState]=useState([]);
+  const [modalIsOpen, setModalIsOpen]=useState({boolean:false, value:""});
 
   useEffect(()=>{
     getLocalTodos();
@@ -44,13 +46,15 @@ function App() {
           setTodos(localTodos);
   }
   };
+
+
   return (
     <div className="App">
     <header>
       <h1> Todo List</h1>
     </header>
       <Form  setStatus={setStatus} status={status} setInputText={setInputText} todos={todos} setTodos={setTodos} inputText={inputText}/>
-      <TodoList filteredState={filteredState} todos={todos} setTodos={setTodos}/>
+      <TodoList filteredState={filteredState} todos={todos} setTodos={setTodos} modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen}/>
     </div>
   );
 }

@@ -3,10 +3,10 @@ import Todo from './Todo';
 
 const TodoList =(props)=>{
 return(
-  <div class="todo-container">
-     <ul class="todo-list">
+  <div className="todo-container">
+     <ul className="todo-list">
       { props.filteredState.map((todo)=>(
-        <Todo todo={todo} setTodos={props.setTodos} key={todo.id} text={todo.text} todos= {props.todos}/>
+        <Todo todo={todo} setTodos={props.setTodos} key={todo.id} text={todo.text} todos= {props.todos} modalIsOpen={props.modalIsOpen} setModalIsOpen={props.setModalIsOpen} />
       ))}
      </ul>
    </div>
